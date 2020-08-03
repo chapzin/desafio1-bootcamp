@@ -1,0 +1,41 @@
+### Listando todos repositorios
+GET http://localhost:3333/repositories
+content-type: application/json
+
+### Adicionando repositorio
+POST http://localhost:3333/repositories
+content-type: application/json
+
+{
+    "title":"Parse SpedFiscal",
+    "url": "https://github.com/chapzin/parse-efd-fiscal",
+    "techs":[
+        "Ricardo Gomes",
+        "Holanda Junior",
+        "Cesar Guimenes"
+    ]
+}
+
+### Alterando com PUT
+PUT http://localhost:3333/repositories/d298c91e-88d8-45a6-812a-73b07de27fbc
+content-type: application/json
+
+{
+    "title":"Parse SpedFiscal",
+    "url": "https://github.com/chapzin/parse-efd-fiscal",
+    "techs":[
+        "Ricardo Gomes",
+        "Holanda Junior",
+        "Cesar Guimenes",
+        "Teste"
+    ]
+}
+
+
+### Adicionando Like
+POST http://localhost:3333/repositories/d298c91e-88d8-45a6-812a-73b07de27fbc/like
+content-type: application/json
+
+### Deletando
+DELETE  http://localhost:3333/repositories/d298c91e-88d8-45a6-812a-73b07de27fbc
+content-type: application/json
